@@ -14,7 +14,10 @@ export default {
       },
       fontFamily: {
         montserrat: ['Montserrat', ]
-      }
+      },
+      backgroundImage: {
+        'gradient-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],
