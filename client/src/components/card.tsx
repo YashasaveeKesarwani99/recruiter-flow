@@ -45,7 +45,7 @@ const Card: React.FC<CardProps> = ({ title, content, author, date_published, id,
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         >
-            <div className="w-80 h-72 md:w-96 md:h-80 bg-primary-card-background rounded-3xl p-7 flex flex-col justify-between
+            <div className="relative w-80 h-72 md:w-96 md:h-80 bg-primary-card-background rounded-3xl p-7 flex flex-col justify-between
              hover:bg-gradient-to-br hover:from-primary-card-background from-70% hover:to-primary-background transition duration-500
             ">
                 <section className="flex flex-col items-start justify-between gap-4">

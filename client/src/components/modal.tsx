@@ -4,10 +4,9 @@ export interface ModalProps {
   open: boolean;
   title: string;
   children?: React.ReactNode;
-  onSubmit?: () => void;
 }
 
-const MyModal = ({ open, title, children, onSubmit }: ModalProps) => {
+const MyModal = ({ open, title, children }: ModalProps) => {
 
   return (
     <Modal
