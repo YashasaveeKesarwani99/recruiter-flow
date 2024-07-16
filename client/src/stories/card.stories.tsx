@@ -8,9 +8,11 @@ const meta: Meta<CardProps> = {
 export default meta;
 type Story = StoryObj<CardProps>;
 
-export const Primary: Story = {
+export const CardEle: Story = {
   args: {
-    title: "Title",
-    content: 'Content',
+    title: "How to Build a Successful Blog",
+    content: "Building a successful blog takes time, effort, and dedication. It's not just about writing; it's about creating valuable content that resonates with y...",
+    author: "Yashasavee",
+    date_published: '2024-03-23 '
   },
 };

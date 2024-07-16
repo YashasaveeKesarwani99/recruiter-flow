@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary-background':'#242529',
+        'primary-card-background':'#37383f',
+        'primary-yellow':'#FFF37A',
+        'primary-grey':"#dcdcdd"
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', ]
+      }
+    },
   },
   plugins: [],
 }
