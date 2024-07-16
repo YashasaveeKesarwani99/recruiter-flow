@@ -2,9 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useQuery } from 'react-query'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const fetchUsers = async () =>  {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/blogs`)
+
+    return response.json()
+  }
+
+  const { status, data, error } = useQuery('users', fetchUsers)
+
+  console.log(status, data, error)
 
   return (
     <>
