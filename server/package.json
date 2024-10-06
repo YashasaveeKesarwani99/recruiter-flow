@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
+    "postbuild": "copyfiles -u 1 src/data/**/* dist/src/",
     "build": "tsc",
+    "build:vercel": "npm run postbuild && tsc -p tsconfig.json && resolve-tspaths -p tsconfig.json -s ./src -o ./src --ext ts",
     "dev": "ts-node src/index.ts",
     "serve": "nodemon src/index.ts"
   },
@@ -21,7 +23,9 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.10",
+    "copyfiles": "^2.4.1",
     "nodemon": "^3.1.4",
+    "resolve-tspaths": "^0.8.22",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   }
