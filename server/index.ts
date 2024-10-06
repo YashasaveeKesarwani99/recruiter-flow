@@ -5,7 +5,13 @@ import cors from "cors";
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:5173/"],
+  methods: ["GET"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api", blogRoutes);
 
