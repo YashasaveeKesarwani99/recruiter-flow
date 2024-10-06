@@ -7,7 +7,7 @@ const port = process.env.PORT || 4000;
 
 const corsOptions = {
   origin: ["https://blog-posts-swart.vercel.app/", "http://localhost:5173/"],
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
 
